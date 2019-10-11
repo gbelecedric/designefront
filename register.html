@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Froala Design Blocks - Skeleton</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="" crossorigin="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-design-blocks/2.0.1/css/froala_blocks.min.css">
+</head>
+
+
+<body>
+    <!-- Insert HTML for contents. -->
+    <!----- login---->
+    
+    <section class="fdb-block  py-0">
+    <div id="app">
+            <div   class="col-12 col-md-8 col-lg-6 col-xl-5  text-center" style="margin-top:100px;">
+            <button v-if="login" type="button" v-on:click="afficheregister" class="btn btn-info ">register</button>
+            <button  v-if="register"type="button" v-on:click="affichelogin" class="btn btn-info ">login</button>
+            </div>
+        <div class="container py-5 my-5" style="background-image: url(https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/fingerprint_swrc.svg);">
+            <div class=" row justify-content-end">
+           
+           
+            
+
+            <div  v-if="login" class="col-12 col-md-8 col-lg-6 col-xl-5 text-left">
+                <div class="fdb-box">
+                <div class="row">
+                    <div class="col">
+                    <h1>Log In</h1>
+                    <p class="lead">Right at the coast of the Semantics, a large language ocean. A small river named Duden.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-4">
+                    <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                </div>
+                
+               
+                <div class="row mt-4">
+                    <div class="col">
+                    <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                    <button class="btn btn-secondary" type="button">Submit</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+           
+  
+            <div  v-if="register" class="col-12 col-md-8 col-lg-7  text-center">
+                <div class="fdb-box fdb-touch">
+                <div class="row">
+                    <div class="col">
+                    <h1>Register</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-4">
+                    <input type="text" class="form-control" placeholder="Nom">
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                    <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                </div>
+                <div class="row mt-4">
+                        <div class="col">
+                        <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                            <div class="col">
+                                <input type="password" class="form-control mb-1" placeholder="Password">
+                            </div>
+                        </div>
+                <div class="row mt-4">
+                    <div class="col">
+                    <input type="password" class="form-control mb-1" placeholder="RePassword">
+                    <p class="text-right"><a v-on:click="affichelogin" href="">Already have an account?</a></p>
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col">
+                    <button class="btn btn-primary" type="button">Submit</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+           
+            </div>
+        </section>
+    <!----- endlogin---->
+    <!-----scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    login:true,
+                    register : false
+                },
+                delimiters:["${", "}"],
+                methods: {
+                    affichelogin: function () {
+                    this.login = true
+                    this.register = false
+                    },
+                    afficheregister: function () {
+                        this.register = true
+                        this.login = false
+
+                        }
+                }
+            })
+    </script>
+    <!----endscripts-->
+
+</body>
+</html>  

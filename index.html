@@ -7,12 +7,14 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-design-blocks/2.0.1/css/froala_blocks.min.css">
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
 </head>
 
 <body>
     <!-- Insert HTML for contents. -->
 
-  {# header ------------------------------     #}
+ 
     <header class="bg-dark">
     <div class="container">
         <nav class="navbar navbar-expand-lg">
@@ -57,8 +59,7 @@
         </nav>
     </div>
     </header>
-    {# endheader ------------------------------     #}
-    {# nav-bar ------------------------------     #}
+    
     <section class="fdb-block">
         <div class="container">
             <div class="row align-items-center">
@@ -84,34 +85,40 @@
         
                 <div class="row-70"></div>
         
-                <div class="row text-center justify-content-sm-center no-gutters">
-                <div class="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-3 m-auto">
-                    <div class="fdb-box fdb-touch">
-                    <h2>Feature 1</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                    <p class="mt-4"><a href="https://www.froala.com">Learn More <i class="fas fa-angle-right"></i></a></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-3 m-auto pt-5 pt-xl-0">
+                <div class="owl-carousel owl-theme text-center justify-content-sm-center no-gutters">
+                
+                <div class="item m-auto ">
                     <div class="fdb-box fdb-touch">
                     <h2>Feature 2</h2>
                     <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                     <p class="mt-4"><a href="https://www.froala.com">Learn More <i class="fas fa-angle-right"></i></a></p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-3 m-auto pt-5 pt-xl-0">
+                <div class="item m-auto ">
                     <div class="fdb-box fdb-touch">
-                    <h2>Feature 3</h2>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <h2>Feature 2</h2>
+                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <p class="mt-4"><a href="https://www.froala.com">Learn More <i class="fas fa-angle-right"></i></a></p>
+                    </div>
+                </div>
+                <div class="item m-auto ">
+                    <div class="fdb-box fdb-touch">
+                    <h2>Feature 2</h2>
+                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <p class="mt-4"><a href="https://www.froala.com">Learn More <i class="fas fa-angle-right"></i></a></p>
+                    </div>
+                </div>
+                <div class="item m-auto ">
+                    <div class="fdb-box fdb-touch">
+                    <h2>Feature 2</h2>
+                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                     <p class="mt-4"><a href="https://www.froala.com">Learn More <i class="fas fa-angle-right"></i></a></p>
                     </div>
                 </div>
                 </div>
             </div>
             </section>
-            {# endsection ------------------------------     #}
-
-            {# percing ------------------------------     #}
+          
             <section class="fdb-block" style="background-image: url(https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/zoom_in_1txs.svg)">
             <div class="container">
                 <div class="row text-center">
@@ -171,7 +178,7 @@
                 </div>
             </div>
             </section>
-            {# endoercing ------------------------------     #}
+           
             <section class="fdb-block team-2">
             <div class="container">
                 <div class="row text-center justify-content-center">
@@ -276,6 +283,30 @@
                         </div>
                         </div>
                     </div>
+                    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+                    <script src="owlcarousel/dist/owl.carousel.min.js"></script>
+                    <script>
+                        $('.owl-carousel').owlCarousel({
+                            loop:true,
+                            margin:10,
+                            nav:true,
+                            responsive:{
+                                0:{
+                                    items:1
+                                },
+                                600:{
+                                    items:2
+                                    
+                                },
+                                1000:{
+                                    items:3
+                                }
+                            }
+                        })
+                    </script>
+
                     </footer>
+
+                   
 </body>
 </html> 
